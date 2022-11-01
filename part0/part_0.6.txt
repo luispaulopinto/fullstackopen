@@ -1,0 +1,22 @@
+title Part 0.6
+
+note over browser:
+user writes a note and click on button 'save' 
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over server:
+Server saves the new note on database
+end note
+
+note over server:
+Server sends a json response {"message":"note created"}
+end note
+
+server-->browser: HTTP status code 201 (CREATED)
+
+note over browser:
+browser receives the server response and
+spa.js handles to show the new note on page.
+end note
